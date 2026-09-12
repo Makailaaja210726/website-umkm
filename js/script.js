@@ -1,6 +1,6 @@
 const promoButton = document.querySelector("#promoButton");
 
 promoButton.addEventListener("click", () => {
-  promoButton.textContent = "Promo: Beli 2 gratis tester!";
+  promoButton.textContent = "Promo: Beli 2 gratis sticker";
   console.log("Promo Mochi Daifuku berhasil ditampilkan.");
 });
