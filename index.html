@@ -1,39 +1,67 @@
 <!doctype html>
 <html lang="id">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Mochi Daifuku - Website UMKM</title>
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body>
-    <main class="page">
-      <section class="hero">
-        <p class="eyebrow">UMKM Pekalongan</p>
-        <h1>Mochi Daifuku</h1>
-        <p>Mochi dengan tekstur yang lembut dan chewy</p>
-        <button id="promoButton" type="button">Lihat promo hari ini</button> <!--identitas unik yang nanti dipilih js-->
-      </section>
 
-      <section aria-labelledby="produk-title"> <!--menghubungkan section dengan heading-->
-        <h2 id="produk-title">Produk Unggulan</h2>
-        <ul class="products">
-          <li>Mochi daifuku cokelat - Rp18.000</li>
-          <li>Mochi Daifuku Strawberry- Rp22.000</li>
-        </ul>
-      </section>
-        <!-- Bagian jam buka -->
-      <section aria-labelledby="jam-title">
-        <h2 id="jam-title">Jam Buka</h2>
-        <p1>Sabtu - Minggu: 09.00 - 11.00 WIB</p1>
-      </section>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mochi Daifuku - Website UMKM</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
 
-      <!-- Bagian lokasi -->
-      <section aria-labelledby="lokasi-title">
-        <h2 id="lokasi-title">Lokasi</h2>
-        <p1>Pekalongan, Jawa Tengah</p1>
-      </section>
-    </main>
-    <script src="js/script.js"></script>
-  </body>
+<body>
+  <a class="skip-link" href="#konten">Lewati ke konten utama</a>
+  <header class="site-header">
+    <nav class="nav" aria-label="Navigasi utama">
+      <a class="brand" href="index.html">Moshi Daifuku</a>
+      <ul>
+        <li><a aria-current="page" href="index.html">Beranda</a></li>
+        <li><a href="tentang.html">Tentang Kami</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="konten" class="page">
+
+    <section class="hero" aria-labelledby="hero-title">
+      <p class="eyebrow">UMKM Pekalongan</p>
+      <h1 id="hero-title">Mochi Daifuku</h1>
+      <p class="mochi">Mochi dengan tekstur yang lembut dan chewy </p>
+      <button id="promoButton" type="button">Lihat promo hari ini</button>
+      <img src="assets/images/etalase-kopi.svg" alt="Etalase price list mochi " />
+    </section>
+
+    <section aria-labelledby="produk-title"> <!--menghubungkan section dengan heading-->
+      <h2 id="produk-title">Produk Unggulan</h2>
+     <div class ="product-list">
+      <article class = "Product card">
+        <h3> Mochi Daifuku Cokelat </h3>
+        <p>Rasa manis cokelat yang membuat harimu bahagia</p>
+        <p class="price">Rp10.000</p>
+      </article>
+      <article class = "Product card">
+        <h3> Mochi Daifuku strawberry </h3>
+        <p>Rasa manis cokelat dan strawberry yang membuat harimu penuh dengan cinta</p>
+        <p class="price">Rp15.000</p>
+      </article>
+     </div>
+    </section>
+    <!-- Bagian jam buka -->
+    <section aria-labelledby="jam-title">
+      <h2 id="jam-title">Jam Buka</h2>
+      <p>Sabtu - Minggu: 09.00 - 11.00 WIB</p>
+    </section>
+
+    <!-- Bagian lokasi -->
+    <section aria-labelledby="lokasi-title">
+      <h2 id="lokasi-title">Lokasi</h2>
+      <p>Pekalongan, Jawa Tengah</p>
+    </section>
+  </main>
+  <footer class="site-footer">
+  <p>&copy; 2026 Kaila's Mochi. Data pada halaman ini bersifat dummy.</p>
+</footer>
+<script src="js/script.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
 </html>
