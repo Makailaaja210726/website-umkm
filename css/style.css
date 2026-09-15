@@ -36,7 +36,33 @@ h2{
 .mochi{
   color:#f6e8eb;
 }
+.profil {
+  margin-top: 24px;
+  padding: 20px;
+  background-color: #d15959b2;
+  border-radius: 24px;
+  color: white;
+}
+.profil p {
+  color: rgb(114, 24, 24);
+}
 
+.profil h2 {
+  color: white;
+}
+.images {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+  margin-top: 24px;
+}
+
+.images img {
+  width: 50%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 20px;
+}
 .products {
   padding-left: 1.2rem;
 }
@@ -50,6 +76,7 @@ button {
   border: 0;
   border-radius: 999px;
 }
+
 .skip-link { position: absolute; left: -9999px; padding: 8px 12px; color: white; background: #2f2118; }
 .skip-link:focus { top: 8px; left: 8px; }
 .site-header { padding: 16px 20px; background: white; border-bottom: 1px solid #dccbbc; }

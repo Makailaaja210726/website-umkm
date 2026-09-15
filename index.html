@@ -12,10 +12,12 @@
   <a class="skip-link" href="#konten">Lewati ke konten utama</a>
   <header class="site-header">
     <nav class="nav" aria-label="Navigasi utama">
-      <a class="brand" href="index.html">Moshi Daifuku</a>
+      <a class="brand" href="index.html">Mochi Daifuku</a>
       <ul>
         <li><a aria-current="page" href="index.html">Beranda</a></li>
-        <li><a href="tentang.html">Tentang Kami</a></li>
+        <li><a aria-current="page" href="tentang.html">Tentang Kami</a></li>
+        <li><a aria-current="page" href="#profil">Profil Usaha</a></li>
+        <li><a aria-current="page" href="#kontak">Kontak Singkat</a></li>
       </ul>
     </nav>
   </header>
@@ -27,40 +29,70 @@
       <h1 id="hero-title">Mochi Daifuku</h1>
       <p class="mochi">Mochi dengan tekstur yang lembut dan chewy </p>
       <button id="promoButton" type="button">Lihat promo hari ini</button>
-      <img src="assets/images/etalase-kopi.svg" alt="Etalase price list mochi " />
+      
     </section>
+    
+<section class="profil" aria-labelledby="profil-usaha-title">
+  <h2 id="profil-usaha-title">Profil Usaha</h2>
 
+  <p>
+    Mochi Daifuku adalah usaha UMKM yang menyediakan mochi dengan tekstur
+    lembut dan chewy serta berbagai pilihan rasa yang cocok untuk dinikmati
+    sebagai camilan.
+  </p>
+
+  <p>
+    Usaha ini hadir untuk memberikan camilan yang lezat, terjangkau, dan
+    dibuat dengan memperhatikan kualitas bahan serta rasa. Mochi Daifuku
+    cocok dinikmati bersama keluarga, teman, maupun sebagai camilan sehari-hari.
+  </p>
+
+  <p>
+    Kami berkomitmen untuk memberikan produk yang berkualitas dengan
+    pelayanan yang ramah kepada setiap pelanggan.
+  </p>
+</section>
+
+
+    <section class="images" aria-labelledby="moshi-title">
+      
+      <img src="asset/images/mochi.jpeg" alt="brand mochi" />
+    </section>
     <section aria-labelledby="produk-title"> <!--menghubungkan section dengan heading-->
       <h2 id="produk-title">Produk Unggulan</h2>
-     <div class ="product-list">
-      <article class = "Product card">
-        <h3> Mochi Daifuku Cokelat </h3>
-        <p>Rasa manis cokelat yang membuat harimu bahagia</p>
-        <p class="price">Rp10.000</p>
-      </article>
-      <article class = "Product card">
-        <h3> Mochi Daifuku strawberry </h3>
-        <p>Rasa manis cokelat dan strawberry yang membuat harimu penuh dengan cinta</p>
-        <p class="price">Rp15.000</p>
-      </article>
-     </div>
+      <div class="product-list">
+        <article class="Product card">
+          <h3> Mochi Daifuku Cokelat </h3>
+          <p>Rasa manis cokelat yang membuat harimu bahagia</p>
+          <p class="price">Rp10.000</p>
+        </article>
+        <article class="Product card">
+          <h3> Mochi Daifuku strawberry </h3>
+          <p>Rasa manis cokelat dan strawberry yang membuat harimu penuh dengan cinta</p>
+          <p class="price">Rp15.000</p>
+        </article>
+      </div>
     </section>
-    <!-- Bagian jam buka -->
-    <section aria-labelledby="jam-title">
-      <h2 id="jam-title">Jam Buka</h2>
-      <p>Sabtu - Minggu: 09.00 - 11.00 WIB</p>
-    </section>
+ 
+    <section id="kontak" aria-labelledby="kontak-title">
+    <h2 id="kontak-title">Kontak Singkat</h2>
 
-    <!-- Bagian lokasi -->
-    <section aria-labelledby="lokasi-title">
-      <h2 id="lokasi-title">Lokasi</h2>
-      <p>Pekalongan, Jawa Tengah</p>
-    </section>
+    <p><strong>Lokasi:</strong> CFD alun-alun kajen, Pekalongan, Jawa Tengah</p>
+
+    <p><strong>Jam layanan:</strong> Sabtu - Minggu, 09.00 - 11.00 WIB</p>
+
+    <p>
+      <strong>WhatsApp:</strong>
+      <a href="https://wa.me/6282221817895">
+        Hubungi Mochi Daifuku melalui WhatsApp
+      </a>
+    </p>
+  </section>
+
   </main>
   <footer class="site-footer">
-  <p>&copy; 2026 Kaila's Mochi. Data pada halaman ini bersifat dummy.</p>
-</footer>
-<script src="js/script.js"></script>
+    <p>&copy; 2026 Kaila's Mochi. Data pada halaman ini bersifat dummy.</p>
+  </footer>
   <script src="js/script.js"></script>
 </body>
 
