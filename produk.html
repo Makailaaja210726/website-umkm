@@ -1,67 +1,126 @@
 <!doctype html>
 <html lang="id">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Mochi daifuku - Website UMKM</title>
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body>
-    <a class="skip-link" href="#konten">Lewati ke konten utama</a>
-    <header class="site-header">
-      <nav class="nav" aria-label="Navigasi utama">
-        <a class="brand" href="index.html">Mochi Daifuku</a>
-        <ul>
-          <li><a href="index.html">Beranda</a></li>
-          <li><a href="tentang.html">Tentang Kami</a></li>
-          <li><a aria-current="page" href="produk.html">Produk</a></li>
-          <li><a href="galeri.html">Galeri</a></li>
-        </ul>
-      </nav>
-    </header>
-    <main id="konten" class="page">
-      <h1>Produk Mochi daifuku </h1>
-      <p>Pilih produk sesuai dengan selera anda</p>
-      <section aria-labelledby="kategori-title">
-  <h2 id="kategori-title">Kategori Produk</h2>
-  <ul>
-    <li>Mochi Daifuku Cokelat</li>
-    <li>Mochi daifuku strawberry</li>
-    <li>Paket tester untuk pelanggan baru</li>
-  </ul>
-</section>
-<section aria-labelledby="harga-title">
-  <h2 id="harga-title">Daftar Harga</h2>
-  <table>
-    <caption>Daftar harga Mochi daifuku</caption>
-    <thead>
-      <tr>
-        <th scope="col">Produk</th>
-        <th scope="col">Jumlah</th>
-        <th scope="col">Harga</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th scope="row">Mochi Daifuku cokelat</th>
-        <td>5 pcs</td>
-        <td>Rp 20.000 </td>
-      </tr>
-      <tr>
-        <th scope="row">Mochi Daifuku strawberry</th>
-        <td>5 pcs</td>
-        <td>Rp25.000</td>
-      </tr>
-      <tr>
-        <th scope="row">Mochi Daifuku mango</th>
-        <td> 5 pcs </td>
-        <td>Rp25.000</td>
-      </tr>
-    </tbody>
-  </table>
-</section>
-    <footer class="site-footer">
-      <p>&copy; 2026 Mochi Daifuku. Data pada halaman ini bersifat dummy.</p>
-    </footer>
-  </body>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mochi daifuku - Website UMKM</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <a class="skip-link" href="#konten">Lewati ke konten utama</a>
+  <header class="site-header">
+    <nav class="nav" aria-label="Navigasi utama">
+      <a class="brand" href="index.html">Mochi Daifuku</a>
+      <ul>
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="tentang.html">Tentang Kami</a></li>
+        <li><a aria-current="page" href="produk.html">Produk</a></li>
+        <li><a href="galeri.html">Galeri</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main id="konten" class="page">
+    <h1>Produk Mochi daifuku </h1>
+    <p>Pilih produk sesuai dengan selera anda</p>
+    <section aria-labelledby="kategori-title">
+
+    </section>
+    <section aria-labelledby="kategori-title">
+
+      <h2 id="kategori-title">Kategori Produk</h2>
+
+      <div class="product-list">
+
+        <figure class="media-card">
+          <img src="asset/images/cokelat.jpeg" alt="Mochi Daifuku Cokelat" />
+          <figcaption>
+            Mochi Daifuku Cokelat -5 pcs Rp20.000
+          </figcaption>
+        </figure>
+
+        <figure class="media-card">
+          <img src="asset/images/strawberry.jpeg" alt="Mochi Daifuku Strawberry" />
+          <figcaption>
+            Mochi Daifuku Strawberry -5 pcs Rp25.000
+          </figcaption>
+        </figure>
+
+        <figure class="media-card">
+          <img src="asset/images/mango.jpeg" alt="Mochi Daifuku Mango" />
+          <figcaption>
+            Mochi Daifuku Mango -5 pcs Rp25.000
+          </figcaption>
+        </figure>
+
+
+        <figure class="media-card">
+          <img src="asset/images/mochimatcha.jpeg" alt="Mochi Daifuku Matcha" />
+          <figcaption>
+            Mochi Daifuku Matcha -5 pcs Rp25.000
+          </figcaption>
+        </figure>
+
+      </div>
+    </section>
+
+    <section aria-labelledby="harga-title">
+      <h2 id="harga-title"> Daftar harga</h2>
+      <table>
+        <caption>Daftar katalog produk Mochi Daifuku</caption>
+
+        <thead>
+          <tr>
+            <th scope="col">Nama Produk</th>
+            <th scope="col">Jumlah</th>
+            <th scope="col">Harga</th>
+            <th scope="col">Status</th>
+            <th scope="col">Keterangan</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <th scope="row">Mochi Daifuku Cokelat</th>
+            <td>5 pcs</td>
+            <td>Rp20.000</td>
+            <td>Tersedia</td>
+            <td>Rasa cokelat</td>
+          </tr>
+
+          <tr>
+            <th scope="row">Mochi Daifuku Strawberry</th>
+            <td>5 pcs</td>
+            <td>Rp25.000</td>
+            <td>Tersedia</td>
+            <td>Rasa strawberry</td>
+          </tr>
+
+          <tr>
+            <th scope="row">Mochi Daifuku Mango</th>
+            <td>5 pcs</td>
+            <td>Rp25.000</td>
+            <td>Tersedia</td>
+            <td>Rasa mango</td>
+          </tr>
+
+          <tr>
+            <th scope="row">Mochi Daifuku Matcha</th>
+            <td>5 pcs</td>
+            <td>Rp25.000</td>
+            <td>Tersedia</td>
+            <td>Rasa matcha</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Mochi Daifuku. Data pada halaman ini bersifat dummy.</p>
+  </footer>
+</body>
+
+
 </html>

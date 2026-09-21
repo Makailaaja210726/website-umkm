@@ -42,6 +42,9 @@ h2{
   background-color: #d15959b2;
   border-radius: 24px;
   color: white;
+  display: flex;
+  align-items: center;
+  gap: 30px;
 }
 .profil p {
   color: rgb(114, 24, 24);
@@ -52,11 +55,14 @@ h2{
 }
 .images {
   display: block;
-  width: 100%;
+  width: 45%;
   max-width: 500px;
   height: auto;
-  margin-top: 24px;
+  margin-top: 0;
   border-radius: 20px;
+}
+.profil-text {
+  flex: 1;
 }
 .products {
   padding-left: 1.2rem;
@@ -106,24 +112,28 @@ td { padding: 10px; text-align: left; border: 1px solid #dccbbc; }
 /* Kotak galeri */
 .gallery-list {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 24px;
-  margin-top: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+ 
 }
 
+.gallery-list .media-card:hover{
+  transform: translateY(-5px);
+}
 /* Box setiap gambar */
 .media-card {
-  padding: 16px;
+  padding: 10px;
   background: rgb(192, 129, 129);
   border-radius: 20px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
 }
 
 /* Ukuran gambar agar sama */
 .media-card img {
   display: block;
   width: 100%;
-  height: 400px;
+  height: auto;
   object-fit: cover;
   border-radius: 14px;
 }
@@ -148,4 +158,155 @@ td { padding: 10px; text-align: left; border: 1px solid #dccbbc; }
   .gallery-list {
     grid-template-columns: 1fr;
   }
+}
+
+
+
+/*ukuran kotak produk*/
+.product-list .media-card{
+
+  width: 75%;
+  height: auto;
+  margin: 0;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.product-list .media-card:hover{
+  transform: translateY(-5px);
+  
+}
+
+/*uk gambar produk*/
+.product-list .media-card img{
+  display: block;
+  width: 75;
+  height: auto;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.media-card figcaption{
+  font-size: 15px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.product-list{
+  display: grid;
+  grid-template-columns:repeat(4,1fr);
+  gap: 10px;
+  max-width: 700px;
+  margin:15px auto 20px;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.Product-card{
+  padding: 22px;
+  background:#fff7f7;
+  border-radius: 15px;
+  border: 2px solid #e5b5b5 ;
+}
+
+.Product-card:hover{
+  transform: translateY(-5px); /*naik 5 pixel*/
+}
+
+.Product-card .price{
+  line-height: 1,5;
+}
+
+#kontak{
+  padding: 22px;
+  background:#fff7f7;
+  border-radius: 15px;
+  border: 2px solid #e5b5b5 ;
+}
+#kontak:hover{
+  transform:translateY(-5px);
+}
+#kontak p{
+  line-height: 1,5;
+
+}
+
+#kontak a{
+    color: #a10c0c;
+  font-weight: 700;
+}
+#cerita-title + p{
+  padding: 22px;
+  background:#fff7f7;
+  border-radius: 15px;
+  border: 2px solid #e5b5b5 ;
+
+}
+
+#tentang-title + p{
+  padding: 22px;
+  background:#fff7f7;
+  border-radius: 15px;
+  border: 2px solid #e5b5b5 ;
+}
+
+
+ .cerita {
+  display: inline-block;
+  padding: 8px 18px;
+  margin: 10px auto 15px;
+  color: white;
+  background: rgb(133, 38, 38);
+  border-radius: 14px;
+  font-family: 'Baloo 2', cursive;
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+}
+
+#nilai-title +ul {
+  padding: 22px;
+  background:#fff7f7;
+  border-radius: 15px;
+  border: 2px solid #e5b5b5 ;
+}
+
+#kategori-title +ul{
+    max-width: 600px;
+  padding: 20px 25px 20px 45px;
+  margin-bottom: 30px;
+  background: #fff7f7;
+  border: 2px solid #e5b5b5;
+  border-radius: 18px;
+}
+#kategori-title {
+  margin-top: 25px;
+  margin-bottom: 15px;
+  
+}
+
+#kategori-title +ul:hover{
+  transform: translateY(-5px);
+}
+.owner {
+  width: 220px;
+  margin: 20px auto;
+  padding: 15px;
+  border: 2px solid #a10c0c;
+  border-radius: 12px;
+  text-align: center;
+  background-color: white;
+  box-sizing: border-box;
+}
+
+.owner img {
+  width: 150px !important;
+  height: 150px !important;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 10px;
+  border-radius: 10px;
+}
+
+.owner figcaption {
+  font-size: 14px;
+  margin-top: 8px;
 }
