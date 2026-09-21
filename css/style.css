@@ -310,3 +310,8 @@ td { padding: 10px; text-align: left; border: 1px solid #dccbbc; }
   font-size: 14px;
   margin-top: 8px;
 }
+
+.field { margin-bottom: 16px; }
+.field label { display: block; margin-bottom: 6px; }
+fieldset { margin: 0 0 16px; }
+#preview-form { padding: 16px; white-space: pre-wrap; background: white; border: 1px solid #dccbbc; }
