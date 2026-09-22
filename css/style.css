@@ -109,120 +109,236 @@ td { padding: 10px; text-align: left; border: 1px solid #dccbbc; }
 #media-title{
   color:white;
 }
+/* =========================
+   GALERI
+   ========================= */
+
 /* Kotak galeri */
 .gallery-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 15px;
- 
 }
 
-.gallery-list .media-card:hover{
+/* Efek hover galeri */
+.gallery-list .media-card:hover {
   transform: translateY(-5px);
 }
+
 /* Box setiap gambar */
-.media-card {
+.gallery-list .media-card {
+  width: 100%;
   padding: 10px;
   background: rgb(192, 129, 129);
   border-radius: 20px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   margin-top: 20px;
+  box-sizing: border-box;
+  transition: transform 0.2s ease;
 }
 
-/* Ukuran gambar agar sama */
-.media-card img {
+/* Ukuran gambar galeri agar sama */
+.gallery-list .media-card img {
   display: block;
   width: 100%;
   height: auto;
-  object-fit: cover;
+  object-fit: contain;
   border-radius: 14px;
 }
 
 /* Keterangan gambar */
-.media-card figcaption {
+.gallery-list .media-card figcaption {
   margin-top: 12px;
   color: #630101;
   line-height: 1.5;
-  text-decoration: wavy;
   font-family: 'Baloo 2', cursive;
 }
 
-#audio-title { /*audio itu id jadi pake# */
+/* Judul audio */
+#audio-title {
   font-family: 'Baloo 2', cursive;
   background: rgb(192, 129, 129);
   border-radius: 14px;
-  width:max-content;
-}
-/* Kalau layar HP, jadi satu kolom */
-@media (max-width: 600px) {
-  .gallery-list {
-    grid-template-columns: 1fr;
-  }
+  width: max-content;
 }
 
 
+/* =========================
+   PRODUK
+   ========================= */
 
-/*ukuran kotak produk*/
-.product-list .media-card{
+/* Susunan produk */
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  width: 100%;
+  max-width: 900px;
+  margin: 15px 0 20px;
+}
 
-  width: 75%;
+/* Kotak produk */
+.product-list .media-card {
+  width: 100%;
   height: auto;
   margin: 0;
   padding: 10px;
   box-sizing: border-box;
+  background: rgb(192, 129, 129);
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
 }
 
-.product-list .media-card:hover{
+/* Efek hover produk */
+.product-list .media-card:hover {
   transform: translateY(-5px);
-  
 }
 
-/*uk gambar produk*/
-.product-list .media-card img{
+/* Gambar produk */
+.product-list .media-card img {
   display: block;
-  width: 75;
+  width: 100%;
   height: auto;
   object-fit: cover;
   border-radius: 15px;
 }
 
-.media-card figcaption{
+/* Keterangan produk */
+.product-list .media-card figcaption {
+  margin-top: 10px;
   font-size: 15px;
+  line-height: 1.5;
+  color: #630101;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-.product-list{
-  display: grid;
-  grid-template-columns:repeat(4,1fr);
-  gap: 10px;
-  max-width: 700px;
-  margin:15px auto 20px;
-  margin-left: 0;
-  margin-right: 0;
-}
 
-.Product-card{
+
+/* =========================
+   PRODUCT-CARD
+   ========================= */
+
+.Product-card {
   padding: 22px;
-  background:#fff7f7;
+  background: #fff7f7;
   border-radius: 15px;
-  border: 2px solid #e5b5b5 ;
+  border: 2px solid #e5b5b5;
+  transition: transform 0.2s ease;
 }
 
-.Product-card:hover{
-  transform: translateY(-5px); /*naik 5 pixel*/
+.Product-card:hover {
+  transform: translateY(-5px);
 }
 
-.Product-card .price{
-  line-height: 1,5;
+.Product-card .price {
+  line-height: 1.5;
 }
 
-#kontak{
+
+/* =========================
+   KONTAK
+   ========================= */
+
+#kontak {
   padding: 22px;
-  background:#fff7f7;
+  background: #fff7f7;
   border-radius: 15px;
-  border: 2px solid #e5b5b5 ;
+  border: 2px solid #e5b5b5;
+  transition: transform 0.2s ease;
 }
-#kontak:hover{
-  transform:translateY(-5px);
+
+#kontak:hover {
+  transform: translateY(-5px);
+}
+
+
+/* =========================
+   RESPONSIVE TABLET
+   ========================= */
+
+@media (max-width: 768px) {
+
+  /* Galeri menjadi 2 kolom */
+  .gallery-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .gallery-list .media-card img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+  /* Produk menjadi 2 kolom */
+  .product-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    max-width: 100%;
+  }
+
+  .product-list .media-card {
+    width: 100%;
+  }
+
+  .product-list .media-card img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+  }
+
+  .product-list .media-card figcaption {
+    font-size: 14px;
+  }
+}
+
+
+/* =========================
+   RESPONSIVE HP KECIL
+   ========================= */
+
+@media (max-width: 480px) {
+
+  /* Galeri menjadi 1 kolom */
+  .gallery-list {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .gallery-list .media-card {
+    margin-top: 10px;
+  }
+
+  .gallery-list .media-card img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: auto;
+  object-fit: contain;
+}
+
+  /* Produk menjadi 1 kolom */
+  .product-list {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    width: 100%;
+  }
+
+  .product-list .media-card {
+    width: 100%;
+  }
+
+  .product-list .media-card img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+  }
+
+  .product-list .media-card figcaption {
+    font-size: 15px;
+    line-height: 1.5;
+  }
 }
 #kontak p{
   line-height: 1,5;
@@ -315,3 +431,166 @@ td { padding: 10px; text-align: left; border: 1px solid #dccbbc; }
 .field label { display: block; margin-bottom: 6px; }
 fieldset { margin: 0 0 16px; }
 #preview-form { padding: 16px; white-space: pre-wrap; background: white; border: 1px solid #dccbbc; }
+
+/* =========================
+   FORM KONTAK
+   ========================= */
+
+.page {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.page > h1 {
+    margin: 0;
+    padding: 28px 30px 5px;
+    font-size: 2.7rem;
+    font-weight: 800;
+    color: #a10c0c;
+    background: #fff5f5;
+    border-radius: 20px 20px 0 0;
+}
+
+.page > p {
+    margin: 0 0 30px;
+    padding: 5px 30px 28px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #7d3030;
+    background: #fff5f5;
+    border-radius: 0 0 20px 20px;
+}
+
+/* Form dibuat seperti card */
+#form-kontak {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(120, 30, 30, 0.12);
+}
+
+/* Jarak antar field */
+.field {
+    margin-bottom: 22px;
+}
+
+/* Label */
+.field label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+/* Input, select, textarea */
+.field input,
+.field select,
+.field textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 14px;
+    border: 1px solid #d9b8b8;
+    border-radius: 10px;
+    background: #fffafa;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: 0.2s ease;
+}
+
+/* Saat diklik */
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+    outline: none;
+    border-color: #c21f3a;
+    box-shadow: 0 0 0 3px rgba(194, 31, 58, 0.12);
+    background: #ffffff;
+}
+
+/* Ukuran pesan */
+.field textarea {
+    resize: vertical;
+    min-height: 130px;
+}
+
+/* =========================
+   FIELDSET
+   ========================= */
+
+#form-kontak fieldset {
+    margin: 0 0 22px;
+    padding: 18px 20px;
+    border: 1px solid #e0c5c5;
+    border-radius: 14px;
+    background: #fffafa;
+}
+
+#form-kontak legend {
+    padding: 0 10px;
+    font-weight: 700;
+    color: #a10c0c;
+}
+
+/* Radio */
+#form-kontak fieldset label {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    margin: 8px 20px 8px 0;
+    cursor: pointer;
+}
+
+#form-kontak input[type="radio"] {
+    accent-color: #c21f3a;
+}
+
+/* =========================
+   TOMBOL
+   ========================= */
+
+#form-kontak button[type="submit"] {
+    border: none;
+    padding: 13px 24px;
+    border-radius: 12px;
+    background: #c21f3a;
+    color: white;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+#form-kontak button[type="submit"]:hover {
+    background: #a10c0c;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(161, 12, 12, 0.2);
+}
+
+#form-kontak button[type="submit"]:focus-visible {
+    outline: 3px solid rgba(194, 31, 58, 0.3);
+    outline-offset: 3px;
+}
+
+/* =========================
+   PREVIEW DATA
+   ========================= */
+
+.page > section[aria-labelledby="preview-title"] {
+    margin-top: 25px;
+    padding: 25px;
+    background: #ffffff;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(120, 30, 30, 0.10);
+}
+
+.page > section h2 {
+    margin-top: 0;
+    color: #a10c0c;
+}
+
+#preview-form {
+    padding: 15px;
+    border-radius: 10px;
+    background: #fff5f5;
+    white-space: pre-wrap;
+}

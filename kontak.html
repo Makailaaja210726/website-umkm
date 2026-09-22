@@ -13,7 +13,7 @@
     <a class="skip-link" href="#konten">Lewati ke konten utama</a>
     <header class="site-header">
         <nav class="nav" aria-label="Navigasi utama">
-            <a class="brand" href="index.html">Kopi Nusa</a>
+            <a class="brand" href="index.html">Mochi Daifuku</a>
             <ul>
                 <li><a href="index.html">Beranda</a></li>
                 <li><a href="tentang.html">Tentang Kami</a></li>
@@ -43,7 +43,7 @@
                     <option value="coeklat">Mochi daifuku cokelat</option>
                     <option value="strawberry">Mochi daifuku strawberry</option>
                     <option value="mango">Mochi daifuku mango</option>
-                    <option value ="matcha">>Mochi daifuku matcha</option>
+                    <option value="matcha">Mochi daifuku matcha</option>
                 </select>
             </div>
             <fieldset>
@@ -52,6 +52,32 @@
                 <label><input type="radio" name="topik" value="pesanan" /> Status pesanan</label>
                 <label><input type="radio" name="topik" value="kerja-sama" /> Kerja sama</label>
             </fieldset>
+            <!-- 5. TAMBAHAN: WhatsApp -->
+            <div class="field">
+                <label for="whatsapp">Nomor WhatsApp</label>
+                <input id="whatsapp" name="whatsapp" type="tel" autocomplete="tel" required />
+            </div>
+
+            <!-- 6. TAMBAHAN: Waktu kontak -->
+            <fieldset>
+                <legend>Waktu yang diinginkan untuk dihubungi</legend>
+
+                <label>
+                    <input type="radio" name="waktu" value="pagi" required />
+                    Pagi (08.00–12.00)
+                </label>
+
+                <label>
+                    <input type="radio" name="waktu" value="siang" />
+                    Siang (12.00–15.00)
+                </label>
+
+                <label>
+                    <input type="radio" name="waktu" value="sore" />
+                    Sore (15.00–18.00)
+                </label>
+            </fieldset>
+
 
             <div class="field">
                 <label for="pesan">Pesan</label>

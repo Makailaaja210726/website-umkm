@@ -10,6 +10,8 @@ form.addEventListener("submit", (event) => {
     `Email: ${data.get("email")}`,
     `Paket: ${data.get("paket")}`,
     `Topik: ${data.get("topik")}`,
+    `WhatsApp: ${data.get("whatsapp")}`,
+    `Waktu dihubungi: ${data.get("waktu")}`,
     `Pesan: ${data.get("pesan")}`,
   ].join("\n");
 });
