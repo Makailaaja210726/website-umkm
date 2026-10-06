@@ -221,10 +221,6 @@ p {
   background: #fde68a;
 }
 
-#media-title {
-  color: white;
-}
-
 .mochi {
   color: #f6e8eb;
 }
@@ -339,51 +335,7 @@ th {
   color: #a10c0c;
 }
 
-/* =========================
-   GALERI
-   ========================= */
-.gallery-list {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 15px;
-}
 
-.gallery-list .media-card {
-  width: 100%;
-  margin-top: 20px;
-  padding: 10px;
-  background: rgb(192, 129, 129);
-  border-radius: 20px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  box-sizing: border-box;
-  transition: transform 0.2s ease;
-}
-
-.gallery-list .media-card:hover {
-  transform: translateY(-5px);
-}
-
-.gallery-list .media-card img {
-  display: block;
-  width: 100%;
-  height: auto;
-  object-fit: contain;
-  border-radius: 14px;
-}
-
-.gallery-list .media-card figcaption {
-  margin-top: 12px;
-  color: #630101;
-  line-height: 1.5;
-  font-family: "Baloo 2", cursive;
-}
-
-#audio-title {
-  width: max-content;
-  font-family: "Baloo 2", cursive;
-  background: rgb(192, 129, 129);
-  border-radius: 14px;
-}
 
 /* =========================
    PRODUK
@@ -697,86 +649,6 @@ input[type="checkbox"] {
   color: #a10c0c;
 }
 
-/* =========================
-   RESPONSIVE TABLET
-   ========================= */
-@media (max-width: 768px) {
-  .gallery-list {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
-  }
-
-  .gallery-list .media-card img {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-  }
-
-  .product-list {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
-    max-width: 100%;
-  }
-
-  .product-list .media-card {
-    width: 100%;
-  }
-
-  .product-list .media-card img {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
-  }
-
-  .product-list .media-card figcaption {
-    font-size: 14px;
-  }
-}
-
-/* =========================
-   RESPONSIVE HP KECIL
-   ========================= */
-@media (max-width: 480px) {
-  .gallery-list {
-    grid-template-columns: 1fr;
-    gap: 15px;
-  }
-
-  .gallery-list .media-card {
-    margin-top: 10px;
-  }
-
-  .gallery-list .media-card img {
-    width: 100%;
-    height: auto;
-    aspect-ratio: auto;
-    object-fit: contain;
-  }
-
-  .product-list {
-    grid-template-columns: 1fr;
-    gap: 18px;
-    width: 100%;
-  }
-
-  .product-list .media-card {
-    width: 100%;
-  }
-
-  .product-list .media-card img {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
-  }
-
-  .product-list .media-card figcaption {
-    font-size: 15px;
-    line-height: 1.5;
-  }
-}
-
 .nav {
   display: flex;
   gap: var(--space-3);
@@ -787,9 +659,17 @@ input[type="checkbox"] {
 .nav ul { display: flex; gap: var(--space-2); flex-wrap: wrap; }
 .nav li { margin: 0; }
 
-.product-card { display: flex; flex-direction: column; }
+.product-card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 100%;
+}
+ 
 .product-badge {
-  align-self: flex-start;
+  position: absolute;
+  top: var(--space-2);
+  right: var(--space-2);
   padding: 0.25rem var(--space-2);
   color: var(--color-primary-strong);
   font-size: 0.875rem;
@@ -819,10 +699,121 @@ input[type="checkbox"] {
 }
 .hero-image { width: 100%; border-radius: var(--radius-md); }
 
-.product-grid,
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--space-4);
+    align-items: start;
+}
+
+.audio-section h2 {
+    width: auto;
+    margin: 0 0 var(--space-2);
+
+    color: var(--color-primary-strong);
+    font-family: "Baloo 2", cursive;
+}
+
+
+/* DESKRIPSI AUDIO */
+
+.audio-section p {
+    margin: 0 0 var(--space-3);
+    color: var(--color-muted);
+}
+
+
+/* PEMUTAR AUDIO */
+
+.audio-player {
+    display: block;
+    width: 100%;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+
+    min-height: 150px;
+    margin-bottom: var(--space-5);
+    padding: var(--space-5) 2.5rem;
+
+    color: var(--color-surface);
+    background: var(--color-primary);
+    border-radius: 24px;
+}
+/* =========================
+   GALLERY
+   ========================= */
+
+.gallery-section {
+  width: 100%;
+  margin: 0;
+}
+
+.gallery-section h2 {
+  width: 100%;
+  margin: 0 0 var(--space-4);
+  padding: 0;
+  color: var(--color-primary-strong);
+  font-size: 2rem;
+  text-align: center;
+}
+
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: var(--space-3);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-4);
 }
-.gallery-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+.gallery-grid .media-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  height: 100%;
+  margin: 0;
+  padding: var(--space-3);
+}
+
+.gallery-grid .media-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  border-radius: 10px;
+}
+
+.gallery-grid .media-card figcaption {
+  width: 100%;
+  margin: 0;
+  text-align: center;
+  line-height: 1.5;
+}
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--space-4);
+  align-items: start;
+  margin-bottom: 25px;
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Harga dan informasi produk tetap di atas */
+
+/* Kelompok aksi berada di bagian bawah kartu */
+.card-actions {
+  margin-top: auto;
+}
+.form-actions {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
