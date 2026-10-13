@@ -31,7 +31,7 @@
 
         <article class="product-card">
           <span class="product-badge">New product</span>
-          <img src="asset/images/mochimatcha.jpeg" alt="Mochi Daifuku Matcha" />
+          <img src="asset/images/mochimatcha.jpeg" width="640" height="360" loading="lazy" alt="Mochi Daifuku Matcha" />
           <h3>Mochi daifuku Matcha</h3>
           <p>Mochi daifuku dengan rasa calming matcha yang bikin nagih.</p>
           <p class="price">Rp25.000</p>
@@ -42,7 +42,7 @@
         </article>
         <article class="product-card">
           <span class="product-badge">Terlaris</span>
-          <img src="asset/images/cokelat.jpeg" alt="Mochi Daifuku Cokelat" />
+          <img src="asset/images/cokelat.jpeg" width="640" height="360" loading="lazy" alt="Mochi Daifuku Cokelat" />
           <h3>Mochi daifuku cokelat</h3>
           <p>Mochi daifuku dengan rasa cokelat yang lezat dan lembut.</p>
           <p class="price">Rp20.000</p>
@@ -54,7 +54,8 @@
 
         <article class="product-card">
           <span class="product-badge">Enak</span>
-          <img src="asset/images/strawberry.jpeg" alt="Mochi Daifuku Strawberry" />
+          <img src="asset/images/strawberry.jpeg" width="640" height="360" loading="lazy"
+            alt="Mochi Daifuku Strawberry" />
           <h3>Mochi daifuku strawberry</h3>
           <p>Mochi daifuku dengan rasa cokelat dan strawberry yang membuat harimu penuh dengan cinta.</p>
           <p class="price">Rp25.000</p>
@@ -66,7 +67,7 @@
 
         <article class="product-card">
           <span class="product-badge">Segar</span>
-          <img src="asset/images/mango.jpeg" alt="Mochi Daifuku Mango" />
+          <img src="asset/images/mango.jpeg" width="640" height="360" loading="lazy" alt="Mochi Daifuku Mango" />
           <h3>Mochi daifuku mango</h3>
           <p>Mochi daifuku dengan rasa vanilla dan rasa fruity mango membuat harimu lebih cerah.</p>
           <p class="price">Rp25.000</p>
@@ -77,55 +78,58 @@
         </article>
       </div>
     </section>
+
+
     <section aria-labelledby="harga-title">
       <h2 id="harga-title"> Daftar harga</h2>
-      <table>
-        <caption>Daftar katalog produk Mochi Daifuku</caption>
+      <div class="table-scroll" role="region" aria-labelledby="daftar-harga-caption" tabindex="0">
+        <table>
+          <caption id="daftar-harga-caption">Daftar katalog produk Mochi Daifuku</caption>
+          <thead>
+            <tr>
+              <th scope="col">Nama Produk</th>
+              <th scope="col">Jumlah</th>
+              <th scope="col">Harga</th>
+              <th scope="col">Status</th>
+              <th scope="col">Keterangan</th>
+            </tr>
+          </thead>
 
-        <thead>
-          <tr>
-            <th scope="col">Nama Produk</th>
-            <th scope="col">Jumlah</th>
-            <th scope="col">Harga</th>
-            <th scope="col">Status</th>
-            <th scope="col">Keterangan</th>
-          </tr>
-        </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Mochi Daifuku Cokelat</th>
+              <td>5 pcs</td>
+              <td>Rp20.000</td>
+              <td>Tersedia</td>
+              <td>Rasa cokelat</td>
+            </tr>
 
-        <tbody>
-          <tr>
-            <th scope="row">Mochi Daifuku Cokelat</th>
-            <td>5 pcs</td>
-            <td>Rp20.000</td>
-            <td>Tersedia</td>
-            <td>Rasa cokelat</td>
-          </tr>
+            <tr>
+              <th scope="row">Mochi Daifuku Strawberry</th>
+              <td>5 pcs</td>
+              <td>Rp25.000</td>
+              <td>Tersedia</td>
+              <td>Rasa strawberry</td>
+            </tr>
 
-          <tr>
-            <th scope="row">Mochi Daifuku Strawberry</th>
-            <td>5 pcs</td>
-            <td>Rp25.000</td>
-            <td>Tersedia</td>
-            <td>Rasa strawberry</td>
-          </tr>
+            <tr>
+              <th scope="row">Mochi Daifuku Mango</th>
+              <td>5 pcs</td>
+              <td>Rp25.000</td>
+              <td>Tersedia</td>
+              <td>Rasa mango</td>
+            </tr>
 
-          <tr>
-            <th scope="row">Mochi Daifuku Mango</th>
-            <td>5 pcs</td>
-            <td>Rp25.000</td>
-            <td>Tersedia</td>
-            <td>Rasa mango</td>
-          </tr>
-
-          <tr>
-            <th scope="row">Mochi Daifuku Matcha</th>
-            <td>5 pcs</td>
-            <td>Rp25.000</td>
-            <td>Tersedia</td>
-            <td>Rasa matcha</td>
-          </tr>
-        </tbody>
-      </table>
+            <tr>
+              <th scope="row">Mochi Daifuku Matcha</th>
+              <td>5 pcs</td>
+              <td>Rp25.000</td>
+              <td>Tersedia</td>
+              <td>Rasa matcha</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </section>
   </main>
 

@@ -86,7 +86,7 @@ a:hover {
 }
 
 /* =========================
-   HEADER & NAVIGATION
+   HEADER & NAVIGATION (MOBILE-FIRST BASELINE)
    ========================= */
 .site-header {
   padding: 16px 20px;
@@ -95,6 +95,10 @@ a:hover {
 }
 
 .nav {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  align-items: flex-start;
   width: min(100% - 2rem, 920px);
   max-width: 920px;
   margin: 0 auto;
@@ -102,21 +106,24 @@ a:hover {
 
 .brand {
   display: inline-block;
-  margin-bottom: 8px;
+  margin-bottom: 0;
   color: rgb(137, 38, 38);
   font-weight: 800;
   text-decoration: none;
 }
 
 .nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  flex-wrap: wrap;
   padding: 0;
   margin: 0;
   list-style: none;
 }
 
 .nav li {
-  display: inline-block;
-  margin: 0 12px 8px 0;
+  margin: 0;
 }
 
 .nav a[aria-current="page"] {
@@ -126,12 +133,6 @@ a:hover {
   text-decoration: none;
   background: #fef3c7;
   border-radius: var(--radius-sm);
-}
-
-a:focus-visible,
-button:focus-visible {
-  outline: 3px solid var(--color-focus);
-  outline-offset: 3px;
 }
 
 /* =========================
@@ -156,9 +157,7 @@ button:focus-visible {
   padding: 32px 20px;
 }
 
-h1,
-h2,
-h3 {
+h1, h2, h3 {
   line-height: 1.2;
   text-wrap: balance;
 }
@@ -171,8 +170,7 @@ h2 {
   color: var(--color-primary-strong);
 }
 
-p,
-li {
+p, li {
   max-width: 68ch;
 }
 
@@ -198,10 +196,14 @@ p {
 }
 
 /* =========================
-   HERO
+   HERO (MOBILE-FIRST BASELINE)
    ========================= */
 .hero {
-  padding: 36px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+  align-items: center;
+  padding: var(--space-5) 2.5rem;
   color: var(--color-surface);
   background: var(--color-primary);
   border-radius: 24px;
@@ -219,6 +221,11 @@ p {
 .hero button:hover {
   color: var(--color-text);
   background: #fde68a;
+}
+
+.hero-image {
+  width: 100%;
+  border-radius: var(--radius-md);
 }
 
 .mochi {
@@ -275,7 +282,6 @@ caption {
 table {
   width: 100%;
   border-collapse: collapse;
-  border-radius: 0;
 }
 
 caption {
@@ -284,8 +290,7 @@ caption {
   text-align: left;
 }
 
-th,
-td {
+th, td {
   padding: 10px;
   text-align: left;
   border: 1px solid #dccbbc;
@@ -296,12 +301,29 @@ th {
 }
 
 /* =========================
-   PROFIL
+   TABLE OVERFLOW
+   ========================= */
+.table-scroll {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.table-scroll:focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 3px;
+}
+
+.table-scroll table {
+  min-width: 40rem;
+}
+
+/* =========================
+   PROFIL & ABOUT
    ========================= */
 .profil {
   display: flex;
-  align-items: center;
-  gap: 30px;
+  flex-direction: column;
+  gap: 20px;
   margin-top: 24px;
   padding: 20px;
   color: white;
@@ -309,131 +331,24 @@ th {
   border-radius: 24px;
 }
 
-.profil p {
-  color: rgb(114, 24, 24);
-}
-
-.profil h2 {
-  color: white;
-}
+.profil p { color: rgb(114, 24, 24); }
+.profil h2 { color: white; }
 
 .images {
   display: block;
-  width: 45%;
+  width: 100%;
   max-width: 500px;
   height: auto;
-  margin-top: 0;
   border-radius: 20px;
 }
 
-.profil-text {
-  flex: 1;
-}
+.profil-text { flex: 1; }
 
-.products {
-  padding-left: 1.2rem;
-  color: #a10c0c;
-}
-
-
-
-/* =========================
-   PRODUK
-   ========================= */
-.product-list {
+.about-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 15px;
-  width: 100%;
-  max-width: 900px;
-  margin: 15px 0 20px;
-}
-
-.product-list .media-card {
-  width: 100%;
-  height: auto;
-  margin: 0;
-  padding: 10px;
-  background: rgb(192, 129, 129);
-  border-radius: 20px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  box-sizing: border-box;
-  transition: transform 0.2s ease;
-}
-
-.product-list .media-card:hover {
-  transform: translateY(-5px);
-}
-
-.product-list .media-card img {
-  display: block;
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  border-radius: 15px;
-}
-
-.product-list .media-card figcaption {
-  margin-top: 10px;
-  font-size: 15px;
-  line-height: 1.5;
-  color: #630101;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-}
-
-/* =========================
-   PRODUCT CARD
-   ========================= */
-.product-card {
-  padding: var(--space-4);
-  background: #fff7f7;
-  border: 2px solid #e5b5b5;
-  border-radius: var(--radius-md);
-  transition: transform 0.2s ease;
-}
-
-.product-card:hover {
-  transform: translateY(-5px);
-}
-
-.product-card .price {
-  line-height: 1.5;
-}
-
-/* =========================
-   KONTAK
-   ========================= */
-#kontak {
-  padding: var(--space-4);
-  background: #fff7f7;
-  border: 2px solid #e5b5b5;
-  border-radius: var(--radius-md);
-  transition: transform 0.2s ease;
-}
-
-#kontak:hover {
-  transform: translateY(-5px);
-}
-
-#kontak p {
-  line-height: 1.5;
-}
-
-#kontak a {
-  color: #a10c0c;
-  font-weight: 700;
-}
-
-/* =========================
-   SECTION CONTENT
-   ========================= */
-#cerita-title + p,
-#tentang-title + p,
-#nilai-title + ul {
-  padding: 22px;
-  background: #fff7f7;
-  border: 2px solid #e5b5b5;
-  border-radius: 15px;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+  align-items: start;
 }
 
 .cerita {
@@ -449,74 +364,115 @@ th {
   text-align: center;
 }
 
-#kategori-title {
-  margin-top: 25px;
-  margin-bottom: 15px;
-}
-
-#kategori-title + ul {
-  max-width: 600px;
-  margin-bottom: 30px;
-  padding: 20px 25px 20px 45px;
+#cerita-title + p,
+#tentang-title + p,
+#nilai-title + ul {
+  padding: 22px;
   background: #fff7f7;
   border: 2px solid #e5b5b5;
-  border-radius: 18px;
+  border-radius: 15px;
 }
 
-#kategori-title + ul:hover {
+/* =========================
+   PRODUCT & GALLERY GRIDS (MOBILE-FIRST BASELINE: 1 KOLOM)
+   ========================= */
+.product-grid,
+.product-list,
+.gallery-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+  align-items: start;
+  margin-bottom: 25px;
+  width: 100%;
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 100%;
+  padding: var(--space-4);
+  background: #fff7f7;
+  border: 2px solid #e5b5b5;
+  border-radius: var(--radius-md);
+  transition: transform 0.2s ease;
+}
+
+.product-card:hover {
   transform: translateY(-5px);
 }
 
-/* =========================
-   OWNER
-   ========================= */
-.owner {
-  width: 220px;
-  margin: 20px auto;
-  padding: 15px;
-  text-align: center;
-  background-color: white;
-  border: 2px solid #a10c0c;
-  border-radius: 12px;
-  box-sizing: border-box;
+.product-card img {
+  border-radius: 10px;
+  margin-top: 15px;
 }
 
-.owner img {
+.product-badge {
+  position: absolute;
+  top: var(--space-2);
+  right: var(--space-2);
+  padding: 0.25rem var(--space-2);
+  color: var(--color-primary-strong);
+  font-size: 0.875rem;
+  font-weight: 800;
+  background: #fef3c7;
+  border-radius: 999px;
+}
+
+.card-actions {
+  display: flex;
+  gap: var(--space-2);
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: auto;
+}
+
+.gallery-section h2 {
+  width: 100%;
+  margin: 0 0 var(--space-4);
+  padding: 0;
+  color: var(--color-primary-strong);
+  font-size: 2rem;
+  text-align: center;
+}
+
+.gallery-grid .media-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  height: 100%;
+  margin: 0;
+  padding: var(--space-3);
+}
+
+.gallery-grid .media-card img {
   display: block;
-  width: 150px !important;
-  height: 150px !important;
-  margin: 0 auto 10px;
-  object-fit: cover;
+  width: 100%;
+  height: auto;
   border-radius: 10px;
 }
 
-.owner figcaption {
-  margin-top: 8px;
-  font-size: 14px;
+.gallery-grid .media-card figcaption {
+  width: 100%;
+  text-align: center;
+  line-height: 1.5;
 }
 
 /* =========================
-   FORM KONTAK
+   KONTAK & FORM
    ========================= */
-.page > h1 {
-  margin: 0;
-  padding: 28px 30px 5px;
-  color: #a10c0c;
-  font-size: 2.7rem;
-  font-weight: 800;
-  background: #fff5f5;
-  border-radius: 20px 20px 0 0;
+#kontak {
+  padding: var(--space-4);
+  background: #fff7f7;
+  border: 2px solid #e5b5b5;
+  border-radius: var(--radius-md);
 }
 
-.page > p {
- max-width: none;
-  margin: 0 0 30px;
-  padding: 5px 30px 28px;
-  color: #7d3030;
-  font-size: 1.1rem;
-  line-height: 1.6;
-  background: #fff5f5;
-  border-radius: 0 0 20px 20px;
+#kontak a {
+  color: #a10c0c;
+  font-weight: 700;
 }
 
 #form-kontak {
@@ -540,34 +496,14 @@ th {
 .field select,
 .field textarea {
   width: 100%;
-  box-sizing: border-box;
   padding: 12px 14px;
-  color: inherit;
   font: inherit;
   font-size: 1rem;
   background: #fffafa;
   border: 1px solid #d9b8b8;
   border-radius: 10px;
-  transition: 0.2s ease;
 }
 
-.field input:focus,
-.field select:focus,
-.field textarea:focus {
-  outline: none;
-  border-color: #c21f3a;
-  box-shadow: 0 0 0 3px rgba(194, 31, 58, 0.12);
-  background: #ffffff;
-}
-
-.field textarea {
-  resize: vertical;
-  min-height: 130px;
-}
-
-/* =========================
-   FIELDSET
-   ========================= */
 fieldset {
   margin: 0 0 22px;
   padding: 18px 20px;
@@ -576,244 +512,85 @@ fieldset {
   border-radius: 14px;
 }
 
-#form-kontak legend {
-  padding: 0 10px;
-  color: #a10c0c;
-  font-weight: 700;
-}
-
-#form-kontak fieldset label {
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-  margin: 8px 20px 8px 0;
-  cursor: pointer;
-}
-
-input[type="radio"],
-input[type="checkbox"] {
-  width: auto;
-}
-
-#form-kontak input[type="radio"] {
-  accent-color: #c21f3a;
-}
-
-/* =========================
-   FORM BUTTON
-   ========================= */
-#form-kontak button[type="submit"] {
-  padding: 13px 24px;
-  color: white;
-  font-size: 1rem;
-  font-weight: 700;
-  cursor: pointer;
-  background: #c21f3a;
-  border: none;
-  border-radius: 12px;
-  transition: 0.2s ease;
-}
-
-#form-kontak button[type="submit"]:hover {
-  background: #a10c0c;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 15px rgba(161, 12, 12, 0.2);
-}
-
-#form-kontak button[type="submit"]:focus-visible {
-  outline: 3px solid rgba(194, 31, 58, 0.3);
-  outline-offset: 3px;
-}
-
-/* =========================
-   PREVIEW DATA
-   ========================= */
-#preview-form {
-  padding: 15px;
-  white-space: pre-wrap;
-  background: #fff5f5;
-  border: 1px solid #dccbbc;
-  border-radius: 10px;
-}
-
-.page > section[aria-labelledby="preview-title"] {
-  margin-top: 25px;
-  padding: 25px;
-  background: #ffffff;
-  border-radius: 18px;
-  box-shadow: 0 8px 25px rgba(120, 30, 30, 0.10);
-}
-
-.page > section h2 {
-  margin-top: 0;
-  color: #a10c0c;
-}
-
-.nav {
-  display: flex;
-  gap: var(--space-3);
-  align-items: center;
-  justify-content: space-between;
-}
-.brand { margin-bottom: 0; }
-.nav ul { display: flex; gap: var(--space-2); flex-wrap: wrap; }
-.nav li { margin: 0; }
-
-.product-card {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  height: 100%;
-}
- 
-.product-badge {
-  position: absolute;
-  top: var(--space-2);
-  right: var(--space-2);
-  padding: 0.25rem var(--space-2);
-  color: var(--color-primary-strong);
-  font-size: 0.875rem;
-  font-weight: 800;
-  background: #fef3c7;
-  border-radius: 999px;
-}
-.card-actions {
-  display: flex;
-  gap: var(--space-2);
-  align-items: center;
-  flex-wrap: wrap;
-  margin-top: auto;
-}
-.product-card img{
-  border-radius: 10px;
-  margin-top: 15px;
- 
-}
-
-
-.hero {
-  display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  gap: var(--space-4);
-  align-items: center;
-}
-.hero-image { width: 100%; border-radius: var(--radius-md); }
-
-.about-grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: var(--space-4);
-    align-items: start;
-}
-
-.audio-section h2 {
-    width: auto;
-    margin: 0 0 var(--space-2);
-
-    color: var(--color-primary-strong);
-    font-family: "Baloo 2", cursive;
-}
-
-
-/* DESKRIPSI AUDIO */
-
-.audio-section p {
-    margin: 0 0 var(--space-3);
-    color: var(--color-muted);
-}
-
-
-/* PEMUTAR AUDIO */
-
-.audio-player {
-    display: block;
-    width: 100%;
-}
-
-.hero {
-    display: flex;
-    align-items: center;
-
-    min-height: 150px;
-    margin-bottom: var(--space-5);
-    padding: var(--space-5) 2.5rem;
-
-    color: var(--color-surface);
-    background: var(--color-primary);
-    border-radius: 24px;
-}
-/* =========================
-   GALLERY
-   ========================= */
-
-.gallery-section {
-  width: 100%;
-  margin: 0;
-}
-
-.gallery-section h2 {
-  width: 100%;
-  margin: 0 0 var(--space-4);
-  padding: 0;
-  color: var(--color-primary-strong);
-  font-size: 2rem;
-  text-align: center;
-}
-
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: var(--space-4);
-}
-
-.gallery-grid .media-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: var(--space-2);
-  height: 100%;
-  margin: 0;
-  padding: var(--space-3);
-}
-
-.gallery-grid .media-card img {
-  display: block;
-  width: 100%;
-  height: auto;
-  margin: 0;
-  border-radius: 10px;
-}
-
-.gallery-grid .media-card figcaption {
-  width: 100%;
-  margin: 0;
-  text-align: center;
-  line-height: 1.5;
-}
-.product-grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: var(--space-4);
-  align-items: start;
-  margin-bottom: 25px;
-}
-
-.product-card {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-
-/* Harga dan informasi produk tetap di atas */
-
-/* Kelompok aksi berada di bagian bawah kartu */
-.card-actions {
-  margin-top: auto;
-}
 .form-actions {
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
   gap: var(--space-2);
+  align-items: center;
   flex-wrap: wrap;
+}
+
+/* =========================
+   OWNER
+   ========================= */
+.owner {
+  width: 220px;
+  margin: 20px auto;
+  padding: 15px;
+  text-align: center;
+  background-color: white;
+  border: 2px solid #a10c0c;
+  border-radius: 12px;
+}
+
+.owner img {
+  display: block;
+  width: 150px !important;
+  height: 150px !important;
+  margin: 0 auto 10px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* =========================
+   MEDIA QUERIES / BREAKPOINTS
+   ========================= */
+
+/* Tablet Sempit (>= 42rem / ~672px): Navigasi Horizontal & Galeri 2 Kolom */
+@media (min-width: 42rem) {
+  .nav ul {
+    flex-direction: row;
+  }
+  
+  .gallery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .profil {
+    flex-direction: row;
+  }
+
+  .images {
+    width: 45%;
+  }
+}
+
+/* Tablet / Laptop (>= 48rem / ~768px): Hero 2 Kolom, About 3 Kolom, Galeri 3 Kolom */
+@media (min-width: 48rem) {
+  .hero {
+    grid-template-columns: 1.2fr 0.8fr;
+  }
+
+  .gallery-grid,
+  .product-grid,
+  .product-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .about-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* Desktop Wide (>= 60rem / ~960px): Header Sejajar & Produk 4 Kolom */
+@media (min-width: 60rem) {
+  .nav {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .product-grid,
+  .product-list {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
 }
