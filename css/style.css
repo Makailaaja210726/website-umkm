@@ -154,7 +154,7 @@ a:hover {
   width: min(100% - 2rem, 920px);
   max-width: 920px;
   margin: 0 auto;
-  padding: 32px 20px;
+  padding: clamp(1.5rem, 4vw, 2rem) 20px;
 }
 
 h1, h2, h3 {
@@ -392,7 +392,7 @@ th {
   flex-direction: column;
   position: relative;
   height: 100%;
-  padding: var(--space-4);
+    padding: clamp(1rem, 2.5vw, 1.5rem);
   background: #fff7f7;
   border: 2px solid #e5b5b5;
   border-radius: var(--radius-md);
@@ -562,24 +562,33 @@ fieldset {
   .images {
     width: 45%;
   }
+  .about-grid{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  
+  }
 }
 
-/* Tablet / Laptop (>= 48rem / ~768px): Hero 2 Kolom, About 3 Kolom, Galeri 3 Kolom */
+/* Tablet / Laptop: mulai 48rem */
 @media (min-width: 48rem) {
   .hero {
     grid-template-columns: 1.2fr 0.8fr;
   }
 
-  .gallery-grid,
-  .product-grid,
-  .product-list {
+  .gallery-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
-  .about-grid {
+  .product-grid,
+  .product-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .about-grid{
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  
   }
 }
+
 
 /* Desktop Wide (>= 60rem / ~960px): Header Sejajar & Produk 4 Kolom */
 @media (min-width: 60rem) {
@@ -588,9 +597,21 @@ fieldset {
     align-items: center;
     justify-content: space-between;
   }
-
+  .about-grid{
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  
+  }
   .product-grid,
   .product-list {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
+}
+
+
+/* P07: Preview data form agar responsif */
+#preview-form {
+  max-width: 100%;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  box-sizing: border-box;
 }
