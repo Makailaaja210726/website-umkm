@@ -1,4 +1,3 @@
-
 "use strict";
 
 console.log("P10 JavaScript aktif");
@@ -20,7 +19,7 @@ const produkUmkm = [
         kategori: "mochi",
         harga: 25000,
         stok: 4,
-        unggulan: true
+        unggulan: false
     },
     {
         nama: "Mochi Daifuku mango",
@@ -38,7 +37,6 @@ const produkUmkm = [
     }
 ];
 
-
 // ==========================================
 // 2. FUNCTION FORMAT RUPIAH
 // ==========================================
@@ -50,7 +48,6 @@ function formatRupiah(nilai) {
         maximumFractionDigits: 0
     }).format(nilai);
 }
-
 
 // ==========================================
 // 3. FUNCTION STATUS STOK
@@ -77,9 +74,21 @@ function statusStok(stok) {
     };
 }
 
+// ==========================================
+// 4. FUNCTION LABEL KATEGORI
+// ==========================================
+
+function labelKategori(kategori) {
+    switch (kategori) {
+        case "mochi":
+            return "Produk mochi pilihan";
+        default:
+            return "Produk UMKM";
+    }
+}
 
 // ==========================================
-// 4. FUNCTION MEMBUAT KARTU PRODUK
+// 5. FUNCTION MEMBUAT KARTU PRODUK
 // ==========================================
 
 function buatKartuProduk(produk) {
@@ -88,16 +97,17 @@ function buatKartuProduk(produk) {
     return `
         <article class="js-product-card">
             <h3>${produk.nama}</h3>
-            <p class="category-note">${produk.kategori}</p>
+            <p class="category-note">${labelKategori(produk.kategori)}</p>
             <p class="price">${formatRupiah(produk.harga)}</p>
-            <span class="stock-badge ${status.className}">${status.label}</span>
+            <span class="stock-badge ${status.className}">
+                ${status.label}
+            </span>
         </article>
     `;
 }
 
-
 // ==========================================
-// 5. FUNCTION RENDER PRODUK
+// 6. FUNCTION RENDER PRODUK
 // ==========================================
 
 function renderProduk() {
@@ -112,7 +122,7 @@ function renderProduk() {
     }
 
     // ==========================================
-    // 6. FOREACH: DEBUGGING DATA PRODUK
+    // 7. FOREACH: DEBUGGING DATA PRODUK
     // ==========================================
 
     produkUmkm.forEach((produk) => {
@@ -125,7 +135,7 @@ function renderProduk() {
     });
 
     // ==========================================
-    // 7. FILTER: MENGAMBIL PRODUK TERSEDIA
+    // 8. FILTER: MENGAMBIL PRODUK YANG TERSEDIA
     // ==========================================
 
     const produkTersedia = produkUmkm.filter(
@@ -133,7 +143,7 @@ function renderProduk() {
     );
 
     // ==========================================
-    // 8. FIND: MENCARI PRODUK UNGGULAN
+    // 9. FIND: MENCARI PRODUK UNGGULAN
     // ==========================================
 
     const produkUnggulan = produkUmkm.find(
@@ -141,7 +151,7 @@ function renderProduk() {
     );
 
     // ==========================================
-    // 9. MAP: MEMBUAT KARTU PRODUK
+    // 10. MAP: MEMBUAT KARTU PRODUK
     // ==========================================
 
     const markupProduk = produkTersedia
@@ -149,7 +159,7 @@ function renderProduk() {
         .join("");
 
     // ==========================================
-    // 10. RENDERING KE HTML
+    // 11. RENDERING KE HTML
     // ==========================================
 
     grid.innerHTML = markupProduk;
@@ -162,7 +172,7 @@ function renderProduk() {
         : "Belum ada produk unggulan.";
 
     // ==========================================
-    // 11. DEBUGGING CONSOLE
+    // 12. DEBUGGING CONSOLE
     // ==========================================
 
     console.log(
@@ -170,12 +180,16 @@ function renderProduk() {
         produkTersedia.length
     );
 
+    console.log(
+        "Produk unggulan:",
+        produkUnggulan ? produkUnggulan.nama : "Belum ada"
+    );
+
     console.table(produkUmkm);
 }
 
-
 // ==========================================
-// 12. MENJALANKAN PROGRAM
+// 13. MENJALANKAN PROGRAM
 // ==========================================
 
 document.addEventListener("DOMContentLoaded", renderProduk);
