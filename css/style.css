@@ -622,10 +622,10 @@ fieldset {
 }
 
 .js-product-card {
-  padding: var(--space-4);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
-  background: var(--color-surface);
+    padding: var(--space-4);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    background: var(--color-surface);
 }
 
 .stock-badge {
@@ -639,10 +639,6 @@ fieldset {
   color: #166534;
 }
 
-.stock-badge.warning {
-  background: #fef3c7;
-  color: #92400e;
-}
 
 .stock-badge.empty {
   background: #fee2e2;
@@ -656,4 +652,89 @@ fieldset {
 #produk-unggulan {
     font-weight: 700;
     color: var(--color-primary, #6f3b1f);
+}
+
+/* =========================
+   FILTER KATEGORI PRODUK
+   ========================= */
+
+.product-section {
+  margin-block: var(--space-4);
+}
+
+.product-section .eyebrow {
+  color: var(--color-primary-strong);
+}
+
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-block: 1rem 1.5rem;
+}
+
+.filter-button {
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  background: var(--color-surface);
+  color: var(--color-text);
+  padding: 0.65rem 1rem;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.filter-button:hover,
+.filter-button:focus-visible {
+  border-color: var(--color-primary);
+  outline: 3px solid rgb(214 70 70 / 20%);
+  outline-offset: 2px;
+}
+
+.filter-button.is-active {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #ffffff;
+}
+
+.filter-button.is-active:hover {
+  background: var(--color-primary-strong);
+  border-color: var(--color-primary-strong);
+}
+
+.produk-status {
+  color: var(--color-muted);
+  font-size: 0.95rem;
+}
+
+/* =========================
+   EMPTY STATE PRODUK
+   ========================= */
+
+.empty-state {
+  grid-column: 1 / -1;
+  border: 1px dashed var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-3);
+  background: var(--color-surface);
+  color: var(--color-muted);
+  text-align: center;
+}
+
+/* =========================
+   KARTU PRODUK KATALOG
+   ========================= */
+
+.product-section .product-card {
+  background: #fff7f7;
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+}
+
+.product-section .product-card:hover {
+  border-color: var(--color-primary);
+  transform: translateY(-5px);
 }

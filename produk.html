@@ -1,161 +1,203 @@
+
 <!doctype html>
 <html lang="id">
 
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Mochi daifuku - Website UMKM</title>
-  <link rel="stylesheet" href="css/style.css" />
-  <script src="js/app.js" defer></script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Katalog Produk - Mochi Daifuku</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/app.js" defer></script>
 </head>
 
 <body>
-  <a class="skip-link" href="#konten">Lewati ke konten utama</a>
-  <header class="site-header">
-    <nav class="nav" aria-label="Navigasi utama">
-      <a class="brand" href="index.html">Mochi Daifuku</a>
-      <ul>
-        <li><a href="index.html">Beranda</a></li>
-        <li><a href="tentang.html">Tentang Kami</a></li>
-        <li><a aria-current="page" href="produk.html">Produk</a></li>
-        <li><a href="galeri.html">Galeri</a></li>
-        <li><a href="kontak.html">Kontak</a></li>
-      </ul>
-    </nav>
-  </header>
-  <main id="konten" class="page">
-    <h1>Produk Mochi daifuku </h1>
-    <p>Pilih produk sesuai dengan selera anda</p>
-    <section aria-labelledby="produk-pilihan-title">
-      <h2 id="produk-pilihan-title">Produk Pilihan</h2>
-      <div class="product-grid">
+    <a class="skip-link" href="#konten">Lewati ke konten utama</a>
 
-        <article class="product-card">
-          <span class="product-badge">New product</span>
-          <img src="asset/images/mochimatcha.jpeg" width="640" height="360" loading="lazy" alt="Mochi Daifuku Matcha" />
-          <h3>Mochi daifuku Matcha</h3>
-          <p>Mochi daifuku dengan rasa calming matcha yang bikin nagih.</p>
-          <p class="price">Rp25.000</p>
-          <div class="card-actions">
-            <a class="button" href="kontak.html">Tanya produk</a>
-            <a href="#harga-title">Lihat tabel harga</a>
-          </div>
-        </article>
-        <article class="product-card">
-          <span class="product-badge">Terlaris</span>
-          <img src="asset/images/cokelat.jpeg" width="640" height="360" loading="lazy" alt="Mochi Daifuku Cokelat" />
-          <h3>Mochi daifuku cokelat</h3>
-          <p>Mochi daifuku dengan rasa cokelat yang lezat dan lembut.</p>
-          <p class="price">Rp20.000</p>
-          <div class="card-actions">
-            <a class="button" href="kontak.html">Tanya produk</a>
-            <a href="#harga-title">Lihat tabel harga</a>
-          </div>
-        </article>
+    <header class="site-header">
+        <nav class="nav" aria-label="Navigasi utama">
+            <a class="brand" href="index.html">Mochi Daifuku</a>
 
-        <article class="product-card">
-          <span class="product-badge">Enak</span>
-          <img src="asset/images/strawberry.jpeg" width="640" height="360" loading="lazy"
-            alt="Mochi Daifuku Strawberry" />
-          <h3>Mochi daifuku strawberry</h3>
-          <p>Mochi daifuku dengan rasa cokelat dan strawberry yang membuat harimu penuh dengan cinta.</p>
-          <p class="price">Rp25.000</p>
-          <div class="card-actions">
-            <a class="button" href="kontak.html">Tanya produk</a>
-            <a href="#harga-title">Lihat tabel harga</a>
-          </div>
-        </article>
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="tentang.html">Tentang Kami</a></li>
+                <li><a aria-current="page" href="produk.html">Produk</a></li>
+                <li><a href="galeri.html">Galeri</a></li>
+                <li><a href="kontak.html">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
 
-        <article class="product-card">
-          <span class="product-badge">Segar</span>
-          <img src="asset/images/mango.jpeg" width="640" height="360" loading="lazy" alt="Mochi Daifuku Mango" />
-          <h3>Mochi daifuku mango</h3>
-          <p>Mochi daifuku dengan rasa vanilla dan rasa fruity mango membuat harimu lebih cerah.</p>
-          <p class="price">Rp25.000</p>
-          <div class="card-actions">
-            <a class="button" href="kontak.html">Tanya produk</a>
-            <a href="#harga-title">Lihat tabel harga</a>
-          </div>
-        </article>
-      </div>
-    </section>
+    <main id="konten" class="page">
 
+        <!-- KATALOG UTAMA P11 -->
+        <section class="product-section" id="katalog-produk"
+            aria-labelledby="produk-title">
 
-    <section aria-labelledby="harga-title">
-      <h2 id="harga-title"> Daftar harga</h2>
-      <div class="table-scroll" role="region" aria-labelledby="daftar-harga-caption" tabindex="0">
-        <table>
-          <caption id="daftar-harga-caption">Daftar katalog produk Mochi Daifuku</caption>
-          <thead>
-            <tr>
-              <th scope="col">Nama Produk</th>
-              <th scope="col">Jumlah</th>
-              <th scope="col">Harga</th>
-              <th scope="col">Status</th>
-              <th scope="col">Keterangan</th>
-            </tr>
-          </thead>
+            <div class="section-heading">
+                <p class="eyebrow">Katalog Produk UMKM</p>
 
-          <tbody>
-            <tr>
-              <th scope="row">Mochi Daifuku Cokelat</th>
-              <td>5 pcs</td>
-              <td>Rp20.000</td>
-              <td>Tersedia</td>
-              <td>Rasa cokelat</td>
-            </tr>
+                <h1 id="produk-title">
+                    Pilih Mochi Favoritmu!
+                </h1>
 
-            <tr>
-              <th scope="row">Mochi Daifuku Strawberry</th>
-              <td>5 pcs</td>
-              <td>Rp25.000</td>
-              <td>Tersedia</td>
-              <td>Rasa strawberry</td>
-            </tr>
+                <p>
+                    Nikmati berbagai varian Mochi Daifuku
+                    dengan tekstur lembut dan chewy.
+                </p>
 
-            <tr>
-              <th scope="row">Mochi Daifuku Mango</th>
-              <td>5 pcs</td>
-              <td>Rp25.000</td>
-              <td>Tersedia</td>
-              <td>Rasa mango</td>
-            </tr>
+                <!-- Status jumlah produk -->
+                <p id="produk-status" class="produk-status"
+                    aria-live="polite">
+                    Produk belum dimuat.
+                </p>
+            </div>
 
-            <tr>
-              <th scope="row">Mochi Daifuku Matcha</th>
-              <td>5 pcs</td>
-              <td>Rp25.000</td>
-              <td>Tersedia</td>
-              <td>Rasa matcha</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
+            <!-- FILTER KATEGORI -->
+            <div class="filter-bar"
+                aria-label="Filter kategori produk">
 
-    <section class="section" aria-labelledby="produk-dinamis-title">
-      <div class="section-header">
-        <p class="eyebrow">Data JavaScript</p>
-        <h2 id="produk-dinamis-title">Produk dari Data Lokal</h2>
+                <button type="button"
+                    class="filter-button is-active"
+                    data-filter="Semua"
+                    aria-pressed="true">
+                    Semua
+                </button>
 
-        <p id="produk-ringkasan">
-          Data produk akan dimuat melalui JavaScript.
+                <button type="button"
+                    class="filter-button"
+                    data-filter="Cokelat"
+                    aria-pressed="false">
+                    Cokelat
+                </button>
+
+                <button type="button"
+                    class="filter-button"
+                    data-filter="Strawberry"
+                    aria-pressed="false">
+                    Strawberry
+                </button>
+
+                <button type="button"
+                    class="filter-button"
+                    data-filter="Mango"
+                    aria-pressed="false">
+                    Mango
+                </button>
+
+                <button type="button"
+                    class="filter-button"
+                    data-filter="Matcha"
+                    aria-pressed="false">
+                    Matcha
+                </button>
+
+            </div>
+
+            <!-- TEMPAT RENDER KARTU PRODUK P11 -->
+            <div id="produk-grid"
+                class="product-grid"
+                aria-live="polite">
+            </div>
+
+        </section>
+
+        <!-- INFORMASI DAFTAR HARGA -->
+        <section aria-labelledby="harga-title">
+            <h2 id="harga-title">Daftar Harga</h2>
+
+            <div class="table-scroll" role="region"
+                aria-labelledby="daftar-harga-caption"
+                tabindex="0">
+
+                <table>
+                    <caption id="daftar-harga-caption">
+                        Daftar katalog produk Mochi Daifuku
+                    </caption>
+
+                    <thead>
+                        <tr>
+                            <th scope="col">Nama Produk</th>
+                            <th scope="col">Jumlah</th>
+                            <th scope="col">Harga</th>
+                            <th scope="col">Status</th>
+                            <th scope="col">Keterangan</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <th scope="row">Mochi Daifuku Cokelat</th>
+                            <td>5 pcs</td>
+                            <td>Rp20.000</td>
+                            <td>Tersedia</td>
+                            <td>Rasa cokelat</td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row">Mochi Daifuku Strawberry</th>
+                            <td>5 pcs</td>
+                            <td>Rp25.000</td>
+                            <td>Stok terbatas</td>
+                            <td>Rasa strawberry</td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row">Mochi Daifuku Mango</th>
+                            <td>5 pcs</td>
+                            <td>Rp25.000</td>
+                            <td>Tersedia</td>
+                            <td>Rasa mango</td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row">Mochi Daifuku Matcha</th>
+                            <td>5 pcs</td>
+                            <td>Rp25.000</td>
+                            <td>Habis</td>
+                            <td>Rasa matcha</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </section>
+
+        <!-- BAGIAN DATA LOKAL P10 -->
+        <section class="section"
+            aria-labelledby="produk-dinamis-title">
+
+            <div class="section-header">
+                <p class="eyebrow">Data JavaScript P10</p>
+
+                <h2 id="produk-dinamis-title">
+                    Produk dari Data Lokal
+                </h2>
+
+                <p id="produk-ringkasan">
+                    Data produk akan dimuat melalui JavaScript.
+                </p>
+
+                <p id="produk-unggulan">
+                    Produk unggulan akan ditentukan melalui JavaScript.
+                </p>
+            </div>
+
+            <div id="produk-dinamis"
+                class="js-product-grid">
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <p>
+            &copy; 2026 Mochi Daifuku.
+            Data pada halaman ini bersifat dummy.
         </p>
+    </footer>
 
-        <p id="produk-unggulan">
-          Produk unggulan akan ditentukan melalui JavaScript.
-        </p>
-      </div>
-
-      <div id="produk-dinamis" class="js-product-grid"></div>
-    </section>
-    
-  </main>
-
-  <footer class="site-footer">
-    <p>&copy; 2026 Mochi Daifuku. Data pada halaman ini bersifat dummy.</p>
-  </footer>
 </body>
-
-
 </html>
