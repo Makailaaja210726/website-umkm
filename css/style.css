@@ -757,3 +757,115 @@ fieldset {
 .form-feedback.success {
   color: #166534;
 }
+
+/* ========================================== */
+/* STYLING NEWSLETTER MOCHI DAIFUKU */
+/* ========================================== */
+
+/* Mengatur tampilan utama newsletter */
+.newsletter {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 40px 25px;
+    text-align: center;
+    background-color: #f6e8eb;
+    border-radius: 12px;
+}
+
+/* Mengatur judul newsletter */
+.newsletter h2 {
+    color: #a10c0c;
+    margin-bottom: 12px;
+}
+
+/* Mengatur paragraf penjelasan newsletter */
+.newsletter > p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+/* Mengatur form newsletter */
+.newsletter form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* Mengatur label email */
+.newsletter label {
+    display: block;
+    margin-bottom: 8px;
+    text-align: left;
+    font-weight: 600;
+}
+
+/* Mengatur kolom input email */
+.newsletter input[type="email"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 15px;
+}
+
+/* Memberikan efek ketika input dipilih */
+.newsletter input[type="email"]:focus {
+    outline: 2px solid #a10c0c;
+    border-color: #a10c0c;
+}
+
+/* Mengatur tombol berlangganan */
+.newsletter button {
+    padding: 12px 24px;
+    background-color: #a10c0c;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: background-color 0.3s;
+}
+
+/* Efek ketika kursor diarahkan ke tombol */
+.newsletter button:hover {
+    background-color: #3d2020;
+}
+
+/* Mengatur pesan kesalahan */
+.newsletter .field-error {
+    color: #a10c0c;
+    font-size: 14px;
+    text-align: left;
+    margin: 5px 0 12px;
+}
+
+/* Mengatur pesan feedback */
+.newsletter .form-feedback {
+    margin-top: 15px;
+    font-weight: 600;
+}
+
+/* Mengatur pesan ketika pendaftaran berhasil */
+.newsletter .form-feedback.success {
+    color: #256b36;
+}
+
+/* Menyesuaikan tampilan pada layar HP */
+@media (max-width: 600px) {
+    .newsletter {
+        margin: 25px 15px;
+        padding: 30px 18px;
+    }
+
+    .newsletter button {
+        width: 100%;
+    }
+}
+/* Membuat paragraf newsletter berada di tengah */
+.newsletter > p {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+}
